@@ -15,6 +15,27 @@
 | POST /api/search-history        | Add a new search history entry |
 | DELETE /api/search-history/{id} | Delete search history by id    |
 
+Test Endpoints using curl
+
+```
+curl http://localhost:4750/
+```
+
+```
+curl -X POST http://localhost:4750/
+/api/search-history \
+  -H "Content-Type: application/json" \
+  -d '{"cityName": "Shanghai"}'
+```
+
+```
+curl http://localhost:4750/api/search-history
+```
+
+```
+curl -X DELETE http://localhost:4750/api/search-history/1
+```
+
 ## Project Stack
 
 ### Core Technologies
