@@ -1,0 +1,35 @@
+{
+  "name": "weather_app_express_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "rimraf dist && tsc",
+    "start": "tsx src/index.ts"
+  },
+  "keywords": [],
+  "author": "Charlie Feng",
+  "license": "ISC",
+  "dependencies": {
+    "@libsql/client": "^0.15.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "dotenv-expand": "^12.0.2",
+    "drizzle-orm": "^0.44.2",
+    "drizzle-zod": "^0.8.2",
+    "express": "^5.1.0",
+    "zod": "^3.25.53"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.30",
+    "drizzle-kit": "^0.31.1",
+    "eslint": "^9.28.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
