@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "target": "ES2022", // more stable
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "removeComments": true,
     "esModuleInterop": true,
     "strict": true,
     "noUncheckedIndexedAccess": true,

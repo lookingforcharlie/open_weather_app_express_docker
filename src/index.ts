@@ -1,7 +1,7 @@
 import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
-import searchHistoryRoutes from './routes/historyRoutes'
+import searchHistoryRoutes from './routes/historyRoutes.js'
 
 // Load environment variables from .env file
 dotenv.config()
