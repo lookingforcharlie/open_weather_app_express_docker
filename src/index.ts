@@ -1,7 +1,7 @@
 import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
-import searchHistoryRoutes from './routes/historyRoutes.js'
+import searchHistoryRoutes from './routes/historyRoutes'
 
 // Load environment variables from .env file
 dotenv.config()
@@ -11,6 +11,10 @@ const port = process.env.PORT || 4750
 
 app.use(cors()) // Enable CORS for frontend
 app.use(express.json()) // Parse JSON bodies
+
+// debugging docker
+console.log('NODE_ENV:', process.env.NODE_ENV)
+console.log('DATABASE_URL:', process.env.DATABASE_URL)
 
 app.get('/', (req, res) => {
   res.json({

@@ -15,6 +15,7 @@ node_modules/
 .env
 .env.production
 .env.test
+.env.docker
 !.env.example
 
 # logs
