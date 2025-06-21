@@ -12,6 +12,10 @@ const port = process.env.PORT || 4750
 app.use(cors()) // Enable CORS for frontend
 app.use(express.json()) // Parse JSON bodies
 
+// debugging docker
+console.log('NODE_ENV:', process.env.NODE_ENV)
+console.log('DATABASE_URL:', process.env.DATABASE_URL)
+
 app.get('/', (req, res) => {
   res.json({
     message: 'Weather App Backend API on Vercel',

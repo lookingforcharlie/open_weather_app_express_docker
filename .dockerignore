@@ -1,0 +1,31 @@
+# Prevent sensitive files from being copied
+.env
+.env.local
+.env.*.local
+
+# Development files
+node_modules
+npm-debug.log*
+.nyc_output
+coverage
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Documentation
+README.md
+*.md
