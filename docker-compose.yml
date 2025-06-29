@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  weather-app:
+    build:
+      context: . # points to your Dockerfile directory
+      dockerfile: Dockerfile # this line is optional, but it's good to be explicit
+    image: weather-app-express:1.0
+    container_name: weather-app-prod
+    ports:
+      - '4750:4750' # port mapping from host to container
+    environment:
+      - NODE_ENV=production # Override from env_file if needed
+      - PORT=${PORT}
+      - DATABASE_URL=${DATABASE_URL} # Gets from .env automatically
+      - DATABASE_AUTH_TOKEN=${DATABASE_AUTH_TOKEN}
+    restart: unless-stopped
+
+    # Optional: Add health check
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:4750/health']
+      interval: 30s
+      timeout: 10s
+      retries: 3
