@@ -26,6 +26,13 @@ app.get('/', (req, res) => {
   })
 })
 
+// For health check in docker-compose.yml
+app.get('/health', (_req, res) => {
+  res
+    .status(200)
+    .json({ status: 'healthy', timestamp: new Date().toISOString() })
+})
+
 // Mount search history routes
 app.use('/api/search-history', searchHistoryRoutes)
 

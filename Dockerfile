@@ -21,6 +21,9 @@ FROM node:22-alpine
 
 WORKDIR /app
 
+# Install curl in the final image (for healthcheck in docker-compose.yml)
+RUN apk add --no-cache curl
+
 COPY package*.json ./
 
 # --omit=dev means: omit or skip dev dependencies 
